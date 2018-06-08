@@ -8,6 +8,7 @@
 #include "GPSManager.h"
 #include <regex>
 
+// Earth Radius
 static double ER = 6371.0;
 
 //--------------------------------------------------------------
@@ -56,9 +57,9 @@ void GPSManager::addGEOfence() {
     
     SystemMessage("GPSManager", ss.str().c_str());
     
-    geofences.push_back(GEOfence(newGEOFenceName, currentLocation.latitude, currentLocation.longitude, 50, true));
+    AudioManager::instance().playTrack(trackID[GEOfenceCounter]);
     
-//    HTTPManager::instance().request(PLACED_GPS,ofToString(currentLocation.latitude),ofToString(currentLocation.longitude),trackID[GEOfenceCounter]);
+    geofences.push_back(GEOfence(newGEOFenceName, currentLocation.latitude, currentLocation.longitude, 50, true));
     
     if(GEOfenceCounter < trackID.size()) {
         GEOfenceCounter++;
@@ -93,7 +94,6 @@ void GPSManager::newLocationData(const ofxGPS::LocationData &d) {
     }
     
     sort(geofences.begin(), geofences.end(),compareByDistance);
-    
 }
 
 //--------------------------------------------------------------
@@ -116,14 +116,13 @@ void GPSManager::computeDistanceOfFence(GEOfence &g,const ofxGPS::LocationData d
     
     g.distance = distance;
     
-    if(g.distance < 0.1 && !g.entered) {
+    // How far away we want to trigger the event from
+    static float threshold = 0.1f;
+    if(g.distance < threshold && !g.entered) {
         AudioManager::instance().playTrack(g.id);
-//        HTTPManager::instance().request(ENTERED_GPS,ofToString(d.latitude),ofToString(d.longitude),g.id);
         g.entered = true;
     }
-    else if(g.distance > 0.1 && g.entered) {
-//        AudioManager::instance().stopTrack(g.id);
-//        HTTPManager::instance().request(EXITTED_GPS,ofToString(d.latitude),ofToString(d.longitude),g.id);
+    else if(g.distance > threshold && g.entered) {
         g.entered = false;
     }
 }

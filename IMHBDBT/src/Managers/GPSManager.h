@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include "ofxGPS.h"
 #include "IMHBDMain.h"
-#include "HTTPManager.h"
 #include "AudioManager.h"
 
 class GPSManager {
