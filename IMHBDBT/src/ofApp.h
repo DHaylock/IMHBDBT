@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ofxiOS.h"
-#include "HTTPManager.h"
 #include "GPSManager.h"
 #include "AudioManager.h"
 #include "Debug.h"

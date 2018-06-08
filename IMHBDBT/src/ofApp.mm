@@ -110,7 +110,6 @@ void ofApp::touchUp(ofTouchEventArgs & touch){
 
 //--------------------------------------------------------------
 void ofApp::touchDoubleTap(ofTouchEventArgs & touch){
-    AudioManager::instance().playTrack("Chapter1|A",1.0f,3.0);
     GPSManager::instance().addGEOfence();
 }
 
@@ -122,7 +121,6 @@ void ofApp::touchCancelled(ofTouchEventArgs & touch){
 //--------------------------------------------------------------
 void ofApp::gotMessage(ofMessage &msg) {
     Debug::instance().addLogMessage(msg.message);
-    cout << msg.message << endl;
 }
 
 //--------------------------------------------------------------
@@ -148,17 +146,14 @@ void ofApp::deviceOrientationChanged(int newOrientation){
 //--------------------------------------------------------------
 void ofApp::movedEvent(ofxGPS::LocationData &d) {
     
+    // This creates a moving window
     float leftLng = d.longitude - 0.005;
     float bottomLat = d.latitude - 0.01;
     float rightLng = d.longitude + 0.005;
     float topLat = d.latitude + 0.01;
 
-    merMap.update(leftLng, //Left lng
-                 bottomLat,  //Bottom lat
-                 rightLng, //Right lng
-                 topLat); //Top lat
+    merMap.update(leftLng, bottomLat, rightLng, topLat);
     
     meshData.push_back(d);
     mesh.clear();
-    
 }
