@@ -1,0 +1,4 @@
+ofxEasing
+ofxGPS
+ofxUI
+ofxXmlSettings
