@@ -19,7 +19,6 @@
 		9936F6101BFA4DEE00891288 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9936F60F1BFA4DEE00891288 /* Images.xcassets */; };
 		9936F6121BFA65F100891288 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9936F6111BFA65F100891288 /* LaunchScreen.storyboard */; };
 		9969E7561C782C4500DEF0F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9969E7551C782C4500DEF0F6 /* CoreMotion.framework */; };
-		A4CF863E8F954939864A2340 /* HTTPManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC72EA1131C2B87CAD859F /* HTTPManager.mm */; };
 		BB16EBD20F2B2A9500518274 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD10F2B2A9500518274 /* OpenGLES.framework */; };
 		BB16EBD90F2B2AB500518274 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD80F2B2AB500518274 /* QuartzCore.framework */; };
 		BBE5EAB80F49AD8400F28951 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE5EAB70F49AD8400F28951 /* AudioToolbox.framework */; };
@@ -60,14 +59,11 @@
 		23521F9419A9A1217CC7ACB0 /* IMHBDMain.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = IMHBDMain.h; path = src/Utils/IMHBDMain.h; sourceTree = SOURCE_ROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* ofxiOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxiOS_Prefix.pch; sourceTree = "<group>"; };
-		3CCC72EA1131C2B87CAD859F /* HTTPManager.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = HTTPManager.mm; path = src/Managers/HTTPManager.mm; sourceTree = SOURCE_ROOT; };
-		457252AAA0419710EB372AA4 /* HTTPManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = HTTPManager.h; path = src/Managers/HTTPManager.h; sourceTree = SOURCE_ROOT; };
 		4D82B64A07AA2D6C767ABFDB /* AudioManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AudioManager.h; path = src/Managers/AudioManager.h; sourceTree = SOURCE_ROOT; };
 		5326AEA710A23A0500278DE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		67DFA53419F92A5E003B3434 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		6A8BA4D00F4056316CD9B884 /* ofSoundPlayer_ext.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofSoundPlayer_ext.h; path = src/Utils/ofSoundPlayer_ext.h; sourceTree = SOURCE_ROOT; };
-		6AAC603520CAA15800526071 /* GpsiesTrack (1).gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GpsiesTrack (1).gpx"; sourceTree = "<group>"; };
 		79782DD5F50510B898A4B90B /* ofxEasing.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxEasing.h; path = "../../../OF Mobile/of_v0.10.0_ios_release/addons/ofxEasing/src/ofxEasing.h"; sourceTree = SOURCE_ROOT; };
 		82EB9546EE09CAB7CACF726A /* ofxGPSImpliOS.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGPSImpliOS.h; path = "../../../OF Mobile/of_v0.10.0_ios_release/addons/ofxGPS/src/iOS/ofxGPSImpliOS.h"; sourceTree = SOURCE_ROOT; };
 		8606108018CE4722F1C50C26 /* GPSManager.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = GPSManager.mm; path = src/Managers/GPSManager.mm; sourceTree = SOURCE_ROOT; };
@@ -159,7 +155,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				6AAC603520CAA15800526071 /* GpsiesTrack (1).gpx */,
 				9936F60E1BFA4DEE00891288 /* mediaAssets */,
 				E4D8936A11527B74007E1F53 /* src */,
 				BB24E1F710DAA51900E9C588 /* openFrameworks */,
@@ -198,10 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				4D82B64A07AA2D6C767ABFDB /* AudioManager.h */,
-				457252AAA0419710EB372AA4 /* HTTPManager.h */,
 				99FDB673E1495AE1D0ABE11A /* GPSManager.h */,
 				DF8D4BFB294D00B522513E37 /* AudioManager.mm */,
-				3CCC72EA1131C2B87CAD859F /* HTTPManager.mm */,
 				8606108018CE4722F1C50C26 /* GPSManager.mm */,
 			);
 			name = Managers;
@@ -456,7 +449,6 @@
 				E4D8936E11527B74007E1F53 /* main.mm in Sources */,
 				E4D8936F11527B74007E1F53 /* ofApp.mm in Sources */,
 				09A202E160C5D0FBAD2566C4 /* AudioManager.mm in Sources */,
-				A4CF863E8F954939864A2340 /* HTTPManager.mm in Sources */,
 				D0612D0CABB4BFF88373F96D /* GPSManager.mm in Sources */,
 				FAAC5B702002FEFE84572204 /* Debug.mm in Sources */,
 				C4E7C3459002376075BEF121 /* ofxMercatorMap.mm in Sources */,
